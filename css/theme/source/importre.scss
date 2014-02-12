@@ -1,0 +1,53 @@
+/**
+ * imoprtre theme based on Beige theme
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@font-face {
+	font-family: 'Nanum Myeongjo', serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: #333;
+$headingColor: #333;
+$headingMargin: 0 0 40px 0;
+$headingTextShadow: none;
+$backgroundColor: #f7f3de;
+$linkColor: #8b743d;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(79, 64, 28, 0.99);
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( rgba(247,242,211,1), rgba(255,255,255,1) );
+}
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+
+.reveal section img {
+	background: transparent;
+	border: 0;
+	box-shadow: none;
+
+	-webkit-transition: all .2s linear;
+	   -moz-transition: all .2s linear;
+	    -ms-transition: all .2s linear;
+	     -o-transition: all .2s linear;
+	        transition: all .2s linear;
+}
